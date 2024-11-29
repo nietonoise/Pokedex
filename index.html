@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script>
+        function showPokemon(type, description, imgSrc) {
+            const section = document.querySelector('main section');
+            section.innerHTML = `
+                <h2>${type} Type Pokémon</h2>
+                <img src="${imgSrc}" alt="${type} Pokémon">
+                <p>${description}</p>
+            `;
+        }
+
+        function showfire() {
+            showPokemon('Fire', 'Fire Pokémon are strong and passionate, igniting battles with their fiery attacks.', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png');
+        }
+        function showwater() {
+            showPokemon('Water', 'Water Pokémon are calm and adaptive, dominating battles with their aquatic skills.', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png');
+        }
+        function showgrass() {
+            showPokemon('Grass', 'Grass Pokémon connect with nature and use their environmental energy in battle.', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png');
+        }
+        function showelectric() {
+            showPokemon('Electric', 'Electric Pokémon are quick and zappy, shocking opponents with their electric prowess.', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png');
+        }
+        function showPsychic() {
+            showPokemon('Psychic', 'Psychic Pokémon have immense mental power, outsmarting their foes in battle.', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/150.png');
+        }
+        function showghost() {
+            showPokemon('Ghost', 'Ghost Pokémon are mysterious and elusive, striking fear into their opponents.', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/92.png');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img src="./img/Logo.png" alt="Pokedex Logo">
+        <nav>
+            <button class="fire-button" onclick="showfire()">Fire</button>
+            <button class="water-button" onclick="showwater()">Water</button>
+            <button class="grass-button" onclick="showgrass()">Grass</button>
+            <button class="electric-button" onclick="showelectric()">Electric</button>
+            <button class="Psychic-button" onclick="showPsychic()">Psychic</button>
+            <button class="ghost-button" onclick="showghost()">Ghost</button>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <p>Select a Pokémon type to view its details!</p>
+        </section>
+    </main>
+</body>
+</html>
